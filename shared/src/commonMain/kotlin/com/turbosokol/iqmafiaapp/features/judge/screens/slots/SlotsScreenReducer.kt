@@ -19,7 +19,11 @@ class SlotsScreenReducer : Reducer<SlotsScreenState> {
                 oldState.copy(
                     isInit = false,
                     isHidden = !oldState.isHidden,
-                    listIndex = if (oldState.isHidden) oldState.listIndex + 1 else oldState.listIndex
+                    listIndex = if (oldState.isHidden) {
+                        if (oldState.listIndex == -1) oldState.listIndex + 1 else oldState.listIndex
+                    } else {
+                        oldState.listIndex + 1
+                    }
                 )
             }
 

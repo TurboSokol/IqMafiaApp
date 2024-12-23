@@ -44,6 +44,6 @@ object Strings {
     const val scoreCardRate = "Rate"
     const val scoreDops = "Dops"
     const val comment = "Comm"
-    const val commentHint = "Type comment"
+    const val commentHint = "Comment"
 
 }

@@ -122,11 +122,11 @@ fun SlotsSingleGameView(viewModel: ReduxViewModel) {
                     .padding(start = Dimensions.Padding.medium, end = Dimensions.Padding.medium),
                 horizontalArrangement = if (showingNumbers.count() > 8) Arrangement.SpaceEvenly else Arrangement.Start
             ) {
-                showingNumbers.forEach { item ->
+                slotsState.slotsList.subList(0, slotsState.listIndex).forEach { item ->
                     Box(
                         modifier = Modifier
                             .padding(Dimensions.Padding.smedium)
-                            .background(color = MaterialTheme.colorScheme.secondaryContainer)//surface.copy(alpha = 0.1f))
+                            .background(color = MaterialTheme.colorScheme.secondaryContainer)
                     ) {
                         Text(
                             text = item.toString(),
